@@ -1,0 +1,27 @@
+<!--pages/jie3/jie3.wxml-->
+<page-meta>
+    <navigation-bar title="搜索" background-color="#E6BD62" />
+    <view style="width: 100%; height: 100%">
+
+        <view style="width: 100%; height: 100%">
+            <image class="main" src="/pages/6.png" bindtap='dispy' style="width: 100%; height: 100%; display: inline-block; box-sizing: border-box; position: relative; left: 0rpx; top: 0rpx" />
+            <!-- 点击进行搜索 -->
+            <image class="main" src="/pages/07.png" bindtap='search' data-catid="{{inputValue}}" style="width: 10%; height: 6%; display: inline-block; box-sizing: border-box; position: relative; left: 84%; top: -93%" />
+        </view>
+
+        <view style="position: relative; left: 6.5%; top: -91.3%; width: 75.7%; height: 4.5%; display: block; box-sizing: border-box">
+            <!--  下方实现点击输入，同时弹出推荐关键词方框，推荐关键词暂未设置，
+            再次点击其他区域该方框消失 功能等待实现 -->
+            <input placeholder="请输入猫猫id(0~14)" bindtap='dispy' bindinput="inputVal" value="{{inputValue}}" confirm-type="search" style="top: 75%; width: 98%; height: 4.5%; display: block; box-sizing: border-box">
+            </input>
+            <!-- <text bindtap="doSearch">搜索</text> -->
+
+        </view>
+
+        <view style="position: relative; left: 5.8%; top: -91.3%; width: 75.7%; height: 20%; display: block; box-sizing: border-box">
+            <!-- 下方为推荐关键词方框，暂未设置用于显示关键词的text组件 -->
+            <image wx:if="{{key1}}" src="/pages/09.png" style="width: 100%; height: 100%; display: inline-block; box-sizing: border-box; position: relative; left: 0%; top: 0%" />
+        </view>
+
+    </view>
+</page-meta>

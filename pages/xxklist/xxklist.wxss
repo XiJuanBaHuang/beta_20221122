@@ -1,0 +1,117 @@
+ /* pages/detail/detail.wxss */
+ page{
+  width: 100%;
+  height:100%;
+}
+ 
+.cat_all{/*大框架的设置*/
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height:100%;
+}
+ 
+.header{/*头部的设置,即全部和我的喜欢*/
+  background: #ebddc8;
+  color: #000;
+  font-weight: bold;
+  line-height: 50rpx;
+  height: 100rpx;
+  width: 750rpx;
+
+}
+ 
+.tab {/*全部和我的喜欢那一行的样式*/
+  float:left;
+  width: 50%;
+  text-align: center;
+  padding: 30rpx 0;
+  box-shadow: 10rpx 10rpx 5rpx 5rpx #deac6a;
+}
+ 
+
+.tabBorer {/*全部和我的喜欢其中一个被选中之后的样式*/
+  background-color: #eea151;
+  color: #fcecdd;
+}
+
+
+.main{/*主体部分，就是那个swiper*/
+  flex: 1;
+  position: relative;
+  background-color: #ebddc8;
+}
+ 
+.main-scroll{/*‘全部’和‘我的喜欢’的大框架'*/
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+ 
+.main-list{/*内容框架*/
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-left: 2vw;
+  margin-right: 2vw;
+}
+
+.cat_1{/*内容*/
+  width: 650rpx;
+  height: 230rpx;
+  margin-left: 5%;
+  margin-top: 3%;
+  background-color: #ffff;
+  background-size: cover;
+ /* border:1.5px solid #b9d5c9;*/
+  border-radius: 2%;
+  box-shadow: 1.5rpx 2rpx 2rpx 2rpx #deac6a;
+
+  display: flex;
+  align-items: center;
+}
+
+.cat_img{/*头像*/
+  margin-left: 5%;
+  width: 160rpx;
+  height: 160rpx;
+  border-radius: 50%;
+  left:20rpx
+}
+
+.cat_detail_main{/*包括详情按键的view*/
+  margin-left: 12%;
+  margin-top: 2.5%;
+}
+
+.cat_detail{/*详情按键*/
+  left: 18rpx;
+  border-radius:5%;
+  width: 30rpx;
+  height: auto;
+}
+
+.cat_text{/*姓名*/
+  margin-left: 6%;
+  font-weight:bold;    /*设置字体加粗*/
+  width: 150rpx;
+  /*border: 1px solid red;*/
+}
+
+.cat_button{/*这个是干嘛的？*/
+  width: 10%;
+  height: 0%;
+  
+}
+
+.footer{/*这个删掉了*/
+  background: #deac6a;
+  color: #fff;
+  line-height: 100rpx;
+  flex: 0 0 100rpx; /* 不放大不缩小固定100rpx */
+}
+
+
+

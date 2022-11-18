@@ -1,0 +1,33 @@
+ <!--pages/detail/detail.wxml-->
+ <view class='cat_rank'>
+  <view class='header'>
+    <view class='No1'>
+      <view class="No1-txt">
+        <image class="No1-icon" src="/pages/NO.1.png"></image>
+        <text class="No1-name">黑猫警长</text>
+      </view>
+      <view class="No1-img">
+        <image class="No1-king" src="/pages/皇冠.png"></image>
+        <image class="No1-headshoter" src="{{FzuCatHeadshots[0]}}"></image>
+      </view>
+      <image class="No1-like" src="/pages/爱心.png"></image>
+      <text class="No1-likenum">150</text>
+    </view>
+  </view>
+    <!--header头部在这里截止-->
+   <view> 
+    <scroll-view class='main-scroll' scroll-y style="height: 100%">
+     <view class='main-list'>
+      <view class="cat-rank" wx:for="{{likedata}}" wx:for-item="like_data" >
+          <image class="cat-ranknum" mode="aspectFit" src="{{likenum[index]}}"></image>
+          <image class="cat-rankheadshoter" mode="aspectFill" src="{{ FzuCatHeadshots[index]}}"></image>
+          <text class="cat-rankname" selectable >{{FzuCat_Name[index]}}</text>
+          <view class="cat-rank-like" data-catid="{{index}}">   
+            <image class="cat_img" mode="aspectFill" src="/pages/爱心.png"></image>  
+            <text class="cat_text" selectable >{{like_data}}</text>
+          </view>
+      </view>
+    </view>
+  </scroll-view>
+  </view>
+</view>

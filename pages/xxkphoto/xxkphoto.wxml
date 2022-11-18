@@ -1,0 +1,14 @@
+<!--pages/photo/photo.wxml-->
+<view class='main'>
+  <view class='card'>
+    <view class="photo-gird">
+      <image mode="aspectFill" class="photoleft" src="{{FzuCatImg[id][0]}}"></image>
+      <image mode="aspectFill" class="photoright" src="{{FzuCatImg[id][1]}}"></image>
+      <image mode="aspectFill" class="photoleft" src="{{FzuCatImg[id][2]}}"></image>
+      <image mode="aspectFill" class="photoright" src="{{FzuCatImg[id][3]}}"></image>
+      <image mode="aspectFill" class="photoleft" src="{{FzuCatImg[id][4]}}"></image>
+      <image mode="aspectFill" class="photoright" src="{{FzuCatImg[id][5]}}"></image>
+    </view>
+    <view class="card-button" bindtap="jump_button">返回</view>
+  </view>
+</view>

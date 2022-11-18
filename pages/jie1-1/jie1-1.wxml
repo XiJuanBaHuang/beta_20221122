@@ -1,0 +1,21 @@
+ <!--pages/jie1-1/jie1-1.wxml-->
+<page-meta>
+  <navigation-bar
+    title="动态发布"
+    background-color="#E6BD62"
+  />
+  <view style="width: 100%; height: 100%">
+    <view style="width: 100%; height: 100%">
+      <image class="main" src="/pages/4.png" style="width: 100%; height: 100%; display: inline-block; box-sizing: border-box; position: relative; left: 0rpx; top: 0rpx"></image>
+      <!-- 下方实现展示照片预览图，点击可查看详情 -->
+      <image src="{{path}}" bindtap='detail' style="width: 25.4%; height: 15.7%; display: inline-block; box-sizing: border-box; position: relative; left: 10%; top: -90.7%"></image>
+      <!-- 下方为点击重新拍照，进行照片更换；后续可更改为添加更多照片，但受排版影响，实现较为复杂 -->
+      <image src="/pages/06.png" bindtap='jumpPage' style="width: 25.4%; height: 15.7%; display: inline-block; box-sizing: border-box; position: relative; left: 12%; top: -90.7%"></image>
+    </view>
+    <view style="width: 93%; height: 40%; top: -56%; left: 3.5%; position: relative">
+    <!-- 下方为配文输入框以及发布按钮 -->
+    <textarea placeholder="分享你和福大小猫咪的故事吧……" style="width: 100%;height: 90%;top: 10%;left: 15%;display: block; box-sizing: border-box"></textarea>
+      <button bingtap="sent" class="box" style="width: 30%; height: 15%; top: -20%; left: 0%; background-color: #91b1a6; box-shadow: 1rpx 1rpx 2rpx 2rpx #9c9a96; color: #ffff; border-radius: 50px; text-align: center ">发布</button>
+    </view>
+  </view>
+</page-meta> 

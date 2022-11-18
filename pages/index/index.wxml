@@ -1,0 +1,18 @@
+<!--index.wxml-->
+<page-meta>
+  <navigation-bar
+    title="福大猫猫精英班"
+    background-color="#E6BD62"
+  />
+  <view style="width: 100%; height: 100%">
+    <image src="/pages/1.png" style="width: 100%; height: 100%; display: inline-block; box-sizing: border-box; position: relative; left: 0rpx; top: 0rpx"></image>
+    <!-- 打卡--jie1 -->
+    <image src="/pages/camera.png" bindtap='jumpPage1' style="width: 12%; height: 6%; display: inline-block; box-sizing: border-box; position: relative; left: 14%; top: -55%"></image>
+    <!-- 猫猫百科--jie2--暂为空白 -->
+    <image src="/pages/cat.png" bindtap='jumpPage2' style="width: 11.3%; height: 8.4%; display: inline-block; box-sizing: border-box; position: relative; left: 25%; top: -55.1%"></image>
+    <!-- 搜索--jie3 -->
+    <image src="/pages/magnify.png" bindtap='jumpPage3' style="width: 7%; height: 8.5%; display: inline-block; box-sizing: border-box; position: relative; left: 37%; top: -54.2%"></image>
+    <!-- 识别--jie4 -->
+    <image src="/pages/cat1.png" bindtap='jumpPage4' style="width: 15%; height: 7.5%; display: inline-block; box-sizing: border-box; position: relative; left: 45.8%; top: -54.2%"></image>
+  </view>
+</page-meta>

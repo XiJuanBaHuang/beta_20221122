@@ -1,0 +1,54 @@
+ <!--pages/detail/detail.wxml-->
+ <view class='cat_all'>
+  <!--cat_all大框架装所有的东西-->
+  <view class='header'>
+    <!--heade头部，用来装那个全部和我的喜欢-->
+    <view class='tab  {{currentData == 0 ? "tabBorer" : ""}}'  data-current = "0" bindtap='checkCurrent'>全部</view>
+      <!--若选中，则class=tabBorer，否则class=tab-->
+    <view class='tab  {{currentData == 1 ? "tabBorer" : ""}}'  data-current = "1" bindtap='checkCurrent'>我的喜欢</view>
+  </view>
+    <!--header头部在这里截止-->
+  <swiper class='main' current="{{currentData}}" bindchange="bindchange">
+  <!--main主体部分，采用swiper以实现滑动切换‘全部’和‘我的喜欢’界面的效果-->
+      <swiper-item>
+      <!--这部分是‘全部’-->
+        <scroll-view class='main-scroll' scroll-y style="height: 100%">
+        <!--这部分是‘全部’的大框架，采用scroll以实现滑动查看的效果-->
+          <view class='main-list'>
+          <!--这部分是‘全部’的内容框架，用来装猫猫信息的列表-->
+            <view class="cat_1" wx:for="{{cat_img}}" wx:for-item="cat_imgae" >
+            <!--这部分是‘全部’的内容，采用wx:for与js部分的数组匹配-->
+              <image class="cat_img" mode="aspectFill" src="{{cat_imgae}}"></image>
+              <!--头像-->
+              <text class="cat_text" selectable >{{cat_text[index]}}</text>
+              <!--名字-->
+              <view class="cat_detail_main" data-catid="{{index}}" bindtap="jump">
+              <!--为了方便触发事件用一个view包裹button-->
+              <button  class="cat_detail" type="primary" size="mini" style="background-color: #b9d5c9;">详情</button>
+              <!--详情按键-->
+              </view>
+            </view>
+            <!--到这里‘全部’的内容结束-->
+          </view>
+          <!--到这里‘全部’的内容框架结束-->
+        </scroll-view>
+        <!--到这里‘全部’的大框架结束-->
+      </swiper-item>
+      <!--到这里，‘全部’部分结束-->
+      <swiper-item>
+      <!--这部分是‘我的喜欢’-->
+        <scroll-view class='main-scroll' scroll-y style="height: 100%">
+          <view class='main-list'>
+            <view class="cat_1" wx:for="{{cat_img}}"  wx:for-item="cat_imgae" wx:if="{{cat_like[index] == 1}}">
+                  <image class="cat_img" mode="aspectFill"  src="{{cat_imgae}}"></image>
+                  <text class="cat_text" selectable >{{cat_text[index]}}</text>
+                  <view class="cat_detail_main" data-catid="{{index}}" bindtap="jump">
+               <button  class="cat_detail" type="primary" size="mini" style="background-color: #deac6a;">详情</button>
+              </view>
+              </view>
+          </view>
+        </scroll-view>
+      </swiper-item>
+  </swiper>
+
+</view>

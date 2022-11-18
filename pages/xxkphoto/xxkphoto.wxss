@@ -1,0 +1,46 @@
+/* pages/photo/photo.wxss */
+page{
+  width: 100%;
+  height: 100%;
+  background-color: #ebddc8;
+}
+
+.main{/*装所有的东西*/
+  width: 100%;
+  height: 100%;
+}
+
+.card{/*卡片部分*/
+  width: 90%;
+  height: 90%;
+  margin-top: 10%;
+  margin-left: 4%;                      
+}
+
+image{/*图片的统一样式*/
+  width: 300rpx;
+  height: 300rpx;
+  border-radius: 15rpx;
+  margin-top: -1%;
+}
+
+.photoleft{/*左边的照片*/
+  margin-left: 6.9%;
+}
+
+.photoright{/*右边的照片*/
+  margin-left: 0.1%;
+}
+
+.card-button{/*返回按钮*/
+  width: 150rpx;
+  height: 70rpx;
+  background-color: #b9d5c9;
+  border-radius: 20rpx;
+  text-align: center;
+  line-height: 70rpx;
+  margin-left: 73%;
+  font-weight: bold;
+  color: #ffffff;
+  margin-top: 20%;
+}

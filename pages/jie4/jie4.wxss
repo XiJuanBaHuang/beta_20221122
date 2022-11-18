@@ -1,0 +1,4 @@
+/* pages/jie4/jie4.wxss */
+page{
+  height: 100%;
+}

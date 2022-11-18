@@ -1,0 +1,39 @@
+ <!--pages/detail/detail.wxml-->
+<view class='cat-detail'>
+<!--cat-detail大框架，装所有的东西-->
+  <view class='main'>
+  <!--main框架，其实也是装所有的东西-->
+    <view class='card'>
+      <!--card卡片，就是装具体猫猫信息的那个卡片-->
+      <view class='card-header'>
+      <!--card-header头部，就是那个放头像和喜欢按键那个-->
+        <image class='cat-headshoter' src="{{Cat_Img[id]}}"/>
+        <!--头像-->
+        <image class="cat-like" src="{{like_img}}" bindtap="praiseThis" wx:if="{{cat_like == 1}}"  mode="widthFix" />
+        <!--喜欢就是like_img，不喜欢就是like_img2-->
+        <image class="cat-like" src="{{like_img2}}"  bindtap="praiseThis" wx:else mode="widthFix" />
+      </view>
+      <view class='card-detail'>
+      <!--这部分是记录详细信息的-->
+        <text class='detail'>姓名：{{Cat_Name[id]}}</text>
+        <text class='detail'>性别：{{Cat_Gender[id]}}</text>
+        <text class='detail'>性格：{{Cat_Character[id]}}</text>
+        <text class='detail'>品种：{{Cat_Variety[id]}}</text>
+        <text class='detail'>体型：{{Cat_Bodytyp[id]}}</text>
+        <text class='detail'>出没地点：{{Cat_Hauntedplace[id]}}</text>
+        <text class='detail'>是否亲人：{{Cat_People[id]}}</text>
+        <text class='detail'>状态：{{Cat_Condition[id]}}</text>
+      </view>
+      <view class='card-photo'>
+      <!--这部分是展示照片-->
+        <image class='photo' mode="aspectFill" src="{{FzuCatImg[id][0]}}"></image>
+        <image class="photo" mode="aspectFill" src="{{FzuCatImg[id][1]}}"></image>
+        <image class="photo" mode="aspectFill" src="{{FzuCatImg[id][2]}}"></image>
+        <image class="photo" src="https://img-blog.csdnimg.cn/9949b3e77b024681a757ac8c2585f94b.png#pic_center" bindtap="jump_photo"></image>
+        <!--点击这个跳转至照片界面-->
+        <view class="card-button" bindtap="jump_button">返回</view>
+        <!--点击这个跳转至那个‘全部’界面-->
+      </view>
+    </view>
+  </view>
+</view>

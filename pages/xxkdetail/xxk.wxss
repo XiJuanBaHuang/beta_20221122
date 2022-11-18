@@ -1,0 +1,116 @@
+page{
+  width: 100%;
+  height:100%;
+}
+ 
+.cat-detail{/*大框架*/
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height:100%;
+}
+
+.main{/*框架*/
+  flex: 1;
+  width: 100%;
+  height: 100%;
+}
+ 
+.card{/*卡片*/
+  height: 90%;
+  width: 85%;
+  border: 2px solid #ebddc8 ;
+  margin-top: 6%;
+  margin-left: 56.25rpx;
+  border-radius: 25rpx;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+ 
+.card-header{/*装头像那个地方*/
+  width: 100%;
+  height: 25%;
+  border-radius: 25rpx;
+  background: #b9d5c9;
+  box-shadow: 5rpx 5rpx 5rpx 5rpx #91b1a6;
+}
+ 
+.cat-headshoter{/*头像*/
+  margin: 6% 200rpx;
+  width: 180rpx;
+  height: 180rpx;
+  border-radius: 50%;
+  border: 4px dashed #91b1a6;
+  position: absolute;
+}
+
+.cat-like{/*点击喜欢那个图片*/
+  height: 120rpx;
+  width: 120rpx;
+  margin-left: 70%;
+  margin-top: 4%;
+}
+
+.card-detail{/*装详情的框架*/
+  height: 40%;
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  margin-top: 10%;
+ 
+  /*border: 1rpx solid;*/
+}
+ 
+.detail{/*详情文本的设置*/
+   
+    /* 字体大小 */
+    font-size: 35rpx;
+    /* 字体风格-粗细 */
+    font-weight: bold;
+    /*段落排版--行间距（行高）*/
+    line-height: 50rpx;
+    /*段落排版--中文字间距*/
+    letter-spacing: 1px;
+    /*文字对齐 right 、left 、center  */
+    text-align: left;
+    margin-left: 60rpx;
+    margin-right: 60rpx;
+}
+
+.card-photo{/*装展示图片的框架*/
+  height: 200rpx;
+  width: auto;
+  margin-left: 5%;
+  margin-top: 12%;
+  /*border: 1rpx solid red;*/
+}
+
+.photo{/*展示照片*/
+  margin-left: 1rpx;
+  height: 150rpx;
+  width: 150rpx;
+  border-radius: 25rpx;
+}
+
+.card-button{/*返回button*/
+  width: 150rpx;
+  height: 50rpx;
+  background-color: #ffffff;
+  border-radius: 20rpx;
+  text-align: center;
+  margin-left: 73%;
+  font-weight: bold;
+  color: #91b1a6;
+  margin-top: 6%;
+  box-shadow: 1rpx 1rpx 7rpx 7rpx #91b1a6
+}
+
+.footer{
+  background: #deac6a;
+  color: #fff;
+  line-height: 150rpx;
+  height: 150rpx;
+  width: 100%;
+}

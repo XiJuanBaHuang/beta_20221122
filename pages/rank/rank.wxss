@@ -1,0 +1,119 @@
+/* pages/rank/rank.wxss */
+.cat-rank{
+  width: 100%;
+  height: auto;
+}
+
+.No1{
+  width: 750rpx;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  background-color:#ebddc8 ;
+  box-shadow:1rpx 1rpx 5rpx 7rpx #e6a35c;
+}
+
+.No1-txt{
+  display: flex;
+  flex-direction: column;
+}
+
+.No1-icon{
+  width: 80rpx;
+  height: 80rpx;
+  margin-top: 124%;
+  margin-left: 45%;
+}
+
+.No1-name{
+  font-weight: bold;
+  width: 150rpx;
+  margin-top: 7%;
+  margin-left: 35%;
+}
+
+.No1-img{
+  display: flex;
+  flex-direction: column;
+  margin-left: 12%;
+}
+
+.No1-king{
+    width: 80rpx;
+    height: 80rpx;
+    margin-left: 42%;
+}
+
+
+.No1-headshoter{
+  width: 200rpx;
+  height: 200rpx;
+  border-radius: 50%;
+  border: 8rpx dashed #e6a35c;
+  margin-left: 10%;
+  margin-bottom: 30%;
+}
+
+.No1-like{
+  width: 70rpx;
+  height: 70rpx;
+  margin-top: 25%;
+  margin-left: 20%;
+}
+
+.No1-likenum{
+  margin-top: 36%;
+  margin-left: -8.5%;
+}
+
+.main-scroll{
+  height: 1500rpx;
+  width: 100%;
+  position: absolute;
+}
+
+.cat-rank{
+  border:1rpx solid #dfd1c1;
+  box-shadow:1rpx 1rpx 4rpx 1rpx #e7b580;
+  display: flex;
+  flex-direction: row;
+}
+
+.cat-ranknum{
+  width: 50rpx;
+  height: 70rpx;
+  margin-top: 8%;
+  margin-left: 5%;
+}
+
+.cat-rankheadshoter{
+  width: 150rpx;
+  height: 150rpx;
+  border-radius: 50%;
+  margin-top: 3%;
+  margin-bottom: 3%;
+  margin-left: 5%;
+}
+
+.cat-rankname{
+  font-weight: bold;
+  margin-top: 10%;
+  /*border: solid;*/
+  width: 150rpx;
+  height: 50rpx;
+  margin-left: 3%;
+}
+
+.cat-rank-like{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: 20%;
+  /*border: solid;*/
+  margin-top: 8.5%;
+}
+
+.cat_img{
+  width: 55rpx;
+  height: 55rpx;
+}
