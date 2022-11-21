@@ -13,7 +13,8 @@
         "pages/dt/dt",
         "pages/fabu/fabu",
         "pages/test/test",
-        "pages/pengyouquan/pengyouquan"
+        "pages/pengyouquan/pengyouquan",
+        "pages/temp/temp"
     ],
     "window": {
         "backgroundTextStyle": "light",
@@ -32,7 +33,7 @@
                 "selectedIconPath": "index.png"
             },
             {
-                "pagePath": "pages/dt/dt",
+                "pagePath": "pages/pengyouquan/pengyouquan",
                 "text": "动态",
                 "iconPath": "dynamic.png",
                 "selectedIconPath": "dynamic.png"

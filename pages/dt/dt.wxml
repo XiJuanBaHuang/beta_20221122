@@ -1,34 +1,44 @@
 <!--pages/dt/dt.wxml-->
 <page-meta>
-  <navigation-bar title="动态" background-color="#E6BD62" />
-  <view style="width: 100%; height: 100%">
+    <navigation-bar title="动态" background-color="#E6BD62" />
     <view style="width: 100%; height: 100%">
-      <image class="main" src="/pages/3.png" style="width: 100%; height: 100%; display: inline-block; box-sizing: border-box; position: relative; left: 0rpx; top: 0rpx"></image>
-      <image wx:if="{{key1}}" bindtap='getProfile' src="/pages/08.png" class='box' style="width: 22%; height: 13%; display: inline-block; box-sizing: border-box; position: relative; left: 9%; top: -95%"></image>
-      <image wx:else src="{{userInfo.avatarUrl}}" class='box' style="width: 22%; height: 13%; display: inline-block; box-sizing: border-box; position: relative; left: 9%; top: -95%"></image>
-    </view>
-    <view style="width: 100%; height: 10%; display: block; box-sizing: border-box; position: relative; left: 0%; top: -91%">
-      <text wx:if="{{key1}}" bindtap='getProfile' style="width: 40%; height: 48%; display: inline-block; box-sizing: border-box; position: relative; left: 35%; top: 20%">未登录</text>
-      <text wx:else style="width: 40%; height: 48%; display: inline-block; box-sizing: border-box; position: relative; left: 35%; top: 20%">{{userInfo.nickName}}</text>
-    </view>
-    <view style="top: -84.4%; width: 100%; height: 74.5%; display: block; box-sizing: border-box; position: relative; left: 0%">
-      <scroll-view scroll-y="true" style="height: 100%; top: 0%; width: 100%; display: block; box-sizing: border-box">
-        <view id="1" style="width:100%; height: 75%;background-color: #ffffff;">
-          <image src="{{path}}" class="box" style="width: 20%; height: 20%; display: inline-block; box-sizing: border-box; position: relative; left: 10%; top: 10%"></image>
-          <text style="width: 60%; height: 7%; display: inline-block; box-sizing: border-box; position: relative; left: 113rpx; top: -37rpx; color: #d8774d">{{userid1}}</text>
-          <text style="width: 450rpx; height: 50rpx; display: inline-block; box-sizing: border-box; position: relative; left: 263rpx; top: -16rpx">{{text1}}</text>
-          <image src="{{photo1}}" style="width: 50%; height: 50%; display: inline-block; box-sizing: border-box; position: relative; left: 226rpx; top: 5rpx"></image>
-          <image src="/pages/10.png" bindtap="comment" style="width: 5%; height: 5%; display: inline-block; box-sizing: border-box; position: relative; left: 30%; top: 10%"></image>
-          <image src="/pages/11.png" bindtap="like" style="width: 5%; height: 5%; display: inline-block; box-sizing: border-box; position: relative; left: 35%; top: 10%"></image>
+        <view style="width: 100%; height: 100%">
+            <image class="main" src="/pages/3.png" style="width: 100%; height: 100%; display: inline-block; box-sizing: border-box; position: relative; left: 0rpx; top: 0rpx">
+            </image>
+            <image wx:if="{{key1}}" bindtap='getProfile' src="/pages/08.png" class='box' style="width: 22%; height: 13%; display: inline-block; box-sizing: border-box; position: relative; left: 9%; top: -95%">
+            </image>
+            <image wx:else src="{{userInfo.avatarUrl}}" class='box' style="width: 22%; height: 13%; display: inline-block; box-sizing: border-box; position: relative; left: 9%; top: -95%">
+            </image>
         </view>
-        <!-- background-color可修改背景颜色 -->
-        <view id="2" style="width:100%; height: 75%;background-color: #b9d5c9;">
-          <!-- 复制上方id="1"的view组件内的内容即可 -->
+        <view style="width: 100%; height: 10%; display: block; box-sizing: border-box; position: relative; left: 0%; top: -91%">
+            <text wx:if="{{key1}}" bindtap='getProfile' style="width: 40%; height: 48%; display: inline-block; box-sizing: border-box; position: relative; left: 35%; top: 20%">
+                未登录</text>
+            <text wx:else style="width: 40%; height: 48%; display: inline-block; box-sizing: border-box; position: relative; left: 35%; top: 20%">
+                {{userInfo.nickName}}</text>
         </view>
-        <view id="3" style="width:100%; height: 75%;background-color: #91b1a6">
-          <!-- 同上 -->
+        <view style="top: -84.4%; width: 100%; height: 74.5%; display: block; box-sizing: border-box; position: relative; left: 0%">
+            <scroll-view scroll-y="true" style="height: 100%; top: 0%; width: 100%; display: block; box-sizing: border-box">
+                <view id="1" style="width:100%; height: 75%;background-color: #ffffff;">
+                    <image src="{{path}}" class="box" style="width: 20%; height: 20%; display: inline-block; box-sizing: border-box; position: relative; left: 10%; top: 10%">
+                    </image>
+                    <text style="width: 60%; height: 7%; display: inline-block; box-sizing: border-box; position: relative; left: 113rpx; top: -37rpx; color: #d8774d">{{userid1}}</text>
+                    <text style="width: 450rpx; height: 50rpx; display: inline-block; box-sizing: border-box; position: relative; left: 263rpx; top: -16rpx">
+                        {{text1}}</text>
+                    <image src="{{photo1}}" style="width: 50%; height: 50%; display: inline-block; box-sizing: border-box; position: relative; left: 226rpx; top: 5rpx">
+                    </image>
+                    <image src="/pages/10.png" bindtap="comment" style="width: 5%; height: 5%; display: inline-block; box-sizing: border-box; position: relative; left: 30%; top: 10%">
+                    </image>
+                    <image src="/pages/11.png" bindtap="like" style="width: 5%; height: 5%; display: inline-block; box-sizing: border-box; position: relative; left: 35%; top: 10%">
+                    </image>
+                </view>
+                <!-- background-color可修改背景颜色 -->
+                <view id="2" style="width:100%; height: 75%;background-color: #b9d5c9;">
+                    <!-- 复制上方id="1"的view组件内的内容即可 -->
+                </view>
+                <view id="3" style="width:100%; height: 75%;background-color: #91b1a6">
+                    <!-- 同上 -->
+                </view>
+            </scroll-view>
         </view>
-      </scroll-view>
     </view>
-  </view>
 </page-meta>

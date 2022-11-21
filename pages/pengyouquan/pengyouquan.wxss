@@ -1,4 +1,5 @@
 .itemRoot {
+  margin: 30rpx;
   margin-left: 50rpx;
 }
 

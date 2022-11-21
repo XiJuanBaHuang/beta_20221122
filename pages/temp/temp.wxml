@@ -1,0 +1,98 @@
+<!--pages/temp/temp.wxml-->
+<!-- <text>pages/temp/temp.wxml</text> -->
+
+
+<!--pages/dt/dt.wxml-->
+<page-meta>
+    <navigation-bar title="temp动态" background-color="#E6BD62" />
+    <!-- 个人用户信息 -->
+    <view class="background">
+        <!-- 头像 及 用户名 -->
+        <view bindtap='getProfile' style="width: 376rpx; height: 230rpx; display: block; box-sizing: border-box; position: relative; left: 42rpx; top: 20rpx">          
+            <image wx:if="{{hasUserInfo}}" class="userIcon-I" style="width: 156rpx; height: 164rpx; position: relative; left: 0rpx; top: 15rpx; margin-left: 5%;" src="{{userInfo.avatarUrl}}" mode="aspectFill"  />
+            <image wx:else class="userIcon-I" style="width: 156rpx; height: 164rpx; position: relative; left: 0rpx; top: 15rpx; margin-left: 5%;" src="https://www.cgwallpapers.com/img_script/wallpaper_dir/img.php?src=wallpaper_nikolai_lockertsen_20_2560x1440.jpg&height=450&width=800&fill-to-fit&sharpen" mode="aspectFill" />
+            <text  wx:if="{{hasUserInfo}}" style="position: relative; left: 16rpx; top: -56rpx" >{{userInfo.nickName}}</text>         
+            <text  wx:else style="position: relative; left: 16rpx; top: -56rpx" >请登录</text>
+        </view>
+        <!-- 背景猫猫 -->
+        <image class="back1" src="/images/lcy-image1.png" mode="widthFix" style="position: relative; left: 430rpx; top: -233rpx; width: 300rpx; height: 239rpx; display: inline-block; box-sizing: border-box">
+        </image>
+    </view>
+
+    <!-- 所有的用户动态 -->
+    <view>
+        <scroll-view scroll-y="true" style="width: 750rpx; height: 1088rpx; display: block; box-sizing: border-box">
+            <!-- <view wx:for="" wx:key="index"> -->
+            <view class="comments" style="width: 750rpx; height: auto; display: block; box-sizing: border-box" >
+                <view class="userInfo" style="width: 718rpx; height: 164rpx; display: block; box-sizing: border-box">
+                    <image class="userIcon" src="/images/photo.png" style="width: 100rpx; height: 100rpx; display: inline-block; box-sizing: border-box; left: 24rpx; top: 32rpx; position: relative">
+                    </image>
+                    <text class="userName" style="position: relative; left: 150rpx; top: -76rpx">
+                        用户一
+                    </text>
+                    <text class="userComments" style="position: relative; left: 150rpx; top: -100rpx">
+                        用户一的评论
+                    </text>
+                </view>
+                <!-- <view class="images-shared" wx:for="" wx:key="index"> -->
+                <view class="images-shared">
+                    <image class="img" src="https://www.cgwallpapers.com/img_script/wallpaper_dir/img.php?src=wallpaper_ke_su_05_2560x1440.jpg&height=450&width=800&fill-to-fit&sharpen" mode='aspectFill'>
+                    </image>
+                </view>
+
+                <image src="/images/comment.png" style="width: 62rpx; height: 52rpx; display: inline-block; box-sizing: border-box; position: relative; left: 70%; top: 35%"></image>
+                <image src="/images/love.png" style="width: 62rpx; height: 52rpx; display: inline-block; box-sizing: border-box; position: relative; left: 75%; top: 35%"></image>
+
+            </view>
+
+            <!-- <view wx:for="" wx:key="index"> -->
+            <view class="comments" style="width: 750rpx; height: auto; display: block; box-sizing: border-box">
+                <view class="userInfo" style="width: 718rpx; height: 164rpx; display: block; box-sizing: border-box">
+                    <image class="userIcon" src="https://www.cgwallpapers.com/img_script/wallpaper_dir/img.php?src=wallpaper_connor_sheehan_24_2560x1440.jpg&height=450&width=800&fill-to-fit&sharpen" style="width: 100rpx; height: 100rpx; display: inline-block; box-sizing: border-box; position: relative; left: 24rpx; top: 32rpx">
+                    </image>
+                    <text class="userName" style="position: relative; left: 150rpx; top: -76rpx">
+                        用户二
+                    </text>
+                    <text class="userComments" style="position: relative; left: 150rpx; top: -100rpx">
+                        用户二的评论
+                    </text>
+                </view>
+
+                <!-- <view class="images-shared" wx:for="" wx:key="index"> -->
+                <view class="images-shared">
+                    <image class="img" src="https://www.cgwallpapers.com/img_script/wallpaper_dir/img.php?src=wallpaper_andreas_rocha_06_2560x1440.jpg&height=450&width=800&fill-to-fit&sharpen" mode='aspectFill'>
+                    </image>
+                </view>
+
+                <image src="/images/comment.png" style="width: 62rpx; height: 52rpx; display: inline-block; box-sizing: border-box; position: relative; left: 70%; top: 35%"></image>
+                <image src="/images/love.png" style="width: 62rpx; height: 52rpx; display: inline-block; box-sizing: border-box; position: relative; left: 75%; top: 35%"></image>
+            </view>
+
+
+            <!-- <view wx:for="" wx:key="index"> -->
+            <view class="comments" style="width: 750rpx; height: auto; display: block; box-sizing: border-box">
+                <view class="userInfo" style="width: 718rpx; height: 164rpx; display: block; box-sizing: border-box">
+                    <image class="userIcon" src="https://www.cgwallpapers.com/img_script/wallpaper_dir/img.php?src=wallpaper_leon_tukker_31_2560x1440.jpg&height=450&width=800&fill-to-fit&sharpen" style="width: 100rpx; height: 100rpx; display: inline-block; box-sizing: border-box; position: relative; left: 24rpx; top: 32rpx">
+                    </image>
+                    <text class="userName" style="position: relative; left: 150rpx; top: -76rpx">
+                        用户三
+                    </text>
+                    <text class="userComments" style="position: relative; left: 150rpx; top: -100rpx">
+                        用户三的评论
+                    </text>
+                </view>
+
+                <!-- <view class="images-shared" wx:for="" wx:key="index"> -->
+                <view class="images-shared">
+                    <image class="img" src="https://www.cgwallpapers.com/img_script/wallpaper_dir/img.php?src=wallpaper_julian_calle_27_2560x1440.jpg&height=450&width=800&fill-to-fit&sharpen" mode='aspectFill'>
+                    </image>
+                </view>
+
+                <image src="/images/comment.png" style="width: 62rpx; height: 52rpx; display: inline-block; box-sizing: border-box; position: relative; left: 70%; top: 35%"></image>
+                <image src="/images/love.png" style="width: 62rpx; height: 52rpx; display: inline-block; box-sizing: border-box; position: relative; left: 75%; top: 35%"></image>
+            </view>
+
+
+        </scroll-view>
+    </view>
+</page-meta>
