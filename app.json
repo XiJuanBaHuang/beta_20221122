@@ -1,18 +1,19 @@
 {
     "pages": [
-      
-       "pages/index/index",
-       "pages/gr/gr",
-       "pages/jie1/jie1",
-       "pages/jie1-1/jie1-1",
+        "pages/index/index",
+        "pages/gr/gr",
+        "pages/jie1/jie1",
+        "pages/jie1-1/jie1-1",
         "pages/jie3/jie3",
         "pages/jie4/jie4",
         "pages/xxklist/xxklist",
         "pages/xxkdetail/xxk",
-         "pages/xxkphoto/xxkphoto",
+        "pages/xxkphoto/xxkphoto",
         "pages/rank/rank",
-        "pages/dt/dt"
-       
+        "pages/dt/dt",
+        "pages/fabu/fabu",
+        "pages/test/test",
+        "pages/pengyouquan/pengyouquan"
     ],
     "window": {
         "backgroundTextStyle": "light",
@@ -21,33 +22,34 @@
         "navigationBarTextStyle": "black"
     },
     "tabBar": {
-      "backgroundColor": "#E6BD62",
-      "color": "#ffffff",
-      "list": [{
-        "pagePath": "pages/index/index",
-        "text": "首页",
-        "iconPath": "index.png",
-        "selectedIconPath": "index.png"
-      },
-      {
-        "pagePath": "pages/dt/dt",
-        "text": "动态",
-        "iconPath": "dynamic.png",
-        "selectedIconPath": "dynamic.png"
-      },
-      {
-        "pagePath": "pages/rank/rank",
-        "text": "排行榜",
-        "iconPath": "rank.png",
-        "selectedIconPath": "rank.png"
-      },
-      {
-        "pagePath": "pages/gr/gr",
-        "text": "我",
-        "iconPath": "own.png",
-        "selectedIconPath": "own.png"
-      }
-    ]
+        "backgroundColor": "#E6BD62",
+        "color": "#ffffff",
+        "list": [
+            {
+                "pagePath": "pages/index/index",
+                "text": "首页",
+                "iconPath": "index.png",
+                "selectedIconPath": "index.png"
+            },
+            {
+                "pagePath": "pages/dt/dt",
+                "text": "动态",
+                "iconPath": "dynamic.png",
+                "selectedIconPath": "dynamic.png"
+            },
+            {
+                "pagePath": "pages/rank/rank",
+                "text": "排行榜",
+                "iconPath": "rank.png",
+                "selectedIconPath": "rank.png"
+            },
+            {
+                "pagePath": "pages/gr/gr",
+                "text": "我",
+                "iconPath": "own.png",
+                "selectedIconPath": "own.png"
+            }
+        ]
     },
     "style": "v2",
     "sitemapLocation": "sitemap.json"

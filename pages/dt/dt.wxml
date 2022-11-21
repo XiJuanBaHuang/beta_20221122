@@ -1,9 +1,6 @@
 <!--pages/dt/dt.wxml-->
 <page-meta>
-  <navigation-bar
-    title="动态"
-    background-color="#E6BD62"
-  />
+  <navigation-bar title="动态" background-color="#E6BD62" />
   <view style="width: 100%; height: 100%">
     <view style="width: 100%; height: 100%">
       <image class="main" src="/pages/3.png" style="width: 100%; height: 100%; display: inline-block; box-sizing: border-box; position: relative; left: 0rpx; top: 0rpx"></image>
@@ -18,9 +15,9 @@
       <scroll-view scroll-y="true" style="height: 100%; top: 0%; width: 100%; display: block; box-sizing: border-box">
         <view id="1" style="width:100%; height: 75%;background-color: #ffffff;">
           <image src="{{path}}" class="box" style="width: 20%; height: 20%; display: inline-block; box-sizing: border-box; position: relative; left: 10%; top: 10%"></image>
-          <text style="width: 60%; height: 7%; display: inline-block; box-sizing: border-box; position: relative; left: 14%; top: -5%; color: #d8774d;">{{userid1}}</text>
-          <text style="width: 60%; height: 14%; display: inline-block; box-sizing: border-box; position: relative; left: 36%; top: -3%">{{text1}}</text>
-          <image src="{{photo1}}" style="width: 50%; height: 50%; display: inline-block; box-sizing: border-box; position: relative; left: 30%; top: -5%"></image>
+          <text style="width: 60%; height: 7%; display: inline-block; box-sizing: border-box; position: relative; left: 113rpx; top: -37rpx; color: #d8774d">{{userid1}}</text>
+          <text style="width: 450rpx; height: 50rpx; display: inline-block; box-sizing: border-box; position: relative; left: 263rpx; top: -16rpx">{{text1}}</text>
+          <image src="{{photo1}}" style="width: 50%; height: 50%; display: inline-block; box-sizing: border-box; position: relative; left: 226rpx; top: 5rpx"></image>
           <image src="/pages/10.png" bindtap="comment" style="width: 5%; height: 5%; display: inline-block; box-sizing: border-box; position: relative; left: 30%; top: 10%"></image>
           <image src="/pages/11.png" bindtap="like" style="width: 5%; height: 5%; display: inline-block; box-sizing: border-box; position: relative; left: 35%; top: 10%"></image>
         </view>
@@ -34,4 +31,4 @@
       </scroll-view>
     </view>
   </view>
-</page-meta> 
+</page-meta>
