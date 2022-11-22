@@ -1,28 +1,26 @@
- <!--pages/gr/gr.wxml-->
+<!--pages/gr/gr.wxml-->
 <page-meta>
-  <navigation-bar
-    title="个人中心"
-    background-color="#E6BD62"
-  />
-  <view style="width: 100%; height: 100%">
+    <navigation-bar title="个人中心" background-color="#E6BD62" />
     <view style="width: 100%; height: 100%">
-      <image src="/pages/2.png" style="width: 100%; height: 100%; display: inline-block; box-sizing: border-box; position: relative; left: 0rpx; top: 0rpx"></image>
-      <!-- 下方实现点击跳转到打卡界面 -->
-      <image src="/pages/02.png" bindtap='jumpPage' style="width: 74.5%; height: 7.7%; display: inline-block; box-sizing: border-box; position: relative; left: 14.4%; top: -67.5%"></image>
-      <!-- 下方实现点击灰色头像弹窗进行请求授权，并更换为微信头像 -->
-      <image wx:if="{{key1}}" bindtap='getProfile' src="/pages/08.png" class='box' style="width: 25.5%; height: 14.5%; display: inline-block; box-sizing: border-box; position: relative; left: -57%; top: -95.5%"></image>
-      <image wx:else src="{{userInfo.avatarUrl}}" class='box' style="width: 25.5%; height: 14.5%; display: inline-block; box-sizing: border-box; position: relative; left: -57%; top: -95.5%"></image>
+        <view style="width: 100%; height: 100%">
+            <image src="/pages/2.png" style="width: 100%; height: 100%; display: inline-block; box-sizing: border-box; position: relative; left: 0rpx; top: 0rpx"></image>
+            <!-- 下方实现点击跳转到打卡界面 -->
+            <image src="/pages/02.png" bindtap='jumpPage' style="width: 74.5%; height: 7.7%; display: inline-block; box-sizing: border-box; position: relative; left: 14.4%; top: -67.5%"></image>
+            <!-- 下方实现点击灰色头像弹窗进行请求授权，并更换为微信头像 -->
+            <image wx:if="{{hasUserInfo}}"  src="{{userInfo.avatarUrl}}" class='box' style="width: 25.5%; height: 14.5%; display: inline-block; box-sizing: border-box; position: relative; left: -57%; top: -95.5%"></image>
+            <image wx:else src="/pages/08.png" class='box' bindtap='getProfile' style="width: 25.5%; height: 14.5%; display: inline-block; box-sizing: border-box; position: relative; left: -57%; top: -95.5%"></image>
+            
+        </view>
+        <view style="width: 100%; height: 10%; display: block; box-sizing: border-box; position: relative; left: 0rpx; top: -1145rpx">
+
+            <!-- 下方实现点击“未登录”字样弹窗进行请求授权，并更换为微信昵称 -->
+            <text wx:if="{{hasUserInfo}}"  style="width: 40%; height: 48%; display: inline-block; box-sizing: border-box; position: relative; left: 50%; top: 20%">{{userInfo.nickName}}</text>
+            <text wx:else bindtap='getProfile' style="width: 40%; height: 48%; display: inline-block; box-sizing: border-box; position: relative; left: 50%; top: 20%">未登录</text>
+            
+        </view>
+        <!-- 点击到收藏 -->
+        <view style="top: -40%; width: 100%; height: 24.5%; display: block; box-sizing: border-box; position: relative; left: 0%">
+            <button id='button1' bindtap='jump_Page' style="width: 50%; height: 30%; top: 10%; left: 0%;background-color: #b9d5c9;box-shadow: 1rpx 7rpx 7rpx 7rpx #91b1a6; margin-top:10px;">我的收藏</button>
+        </view>
     </view>
-    <view style="width: 100%; height: 10%; display: block; box-sizing: border-box; position: relative; left: 0%; top: -91%">
-    
-    <!-- 下方实现点击“未登录”字样弹窗进行请求授权，并更换为微信昵称 -->
-      <text wx:if="{{key1}}" bindtap='getProfile' style="width: 40%; height: 48%; display: inline-block; box-sizing: border-box; position: relative; left: 50%; top: 20%">未登录</text>
-      <text wx:else  style="width: 40%; height: 48%; display: inline-block; box-sizing: border-box; position: relative; left: 50%; top: 20%">{{userInfo.nickName}}</text>
-    </view>
-    <!-- 点击到收藏 -->
-    <view  style="top: -40%; width: 100%; height: 24.5%; display: block; box-sizing: border-box; position: relative; left: 0%">
-      <button id='button1' bindtap='jump_Page' style="width: 50%; height: 30%; top: 10%; left: 0%;background-color: #b9d5c9;box-shadow: 1rpx 7rpx 7rpx 7rpx #91b1a6; margin-top:10px;">我的收藏</button>
-    </view>
-  </view>
 </page-meta>
- 

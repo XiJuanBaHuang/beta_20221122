@@ -349,6 +349,7 @@ App({
         FzuCat_People: FzuCat_People,
         FzuCat_Condition: FzuCat_Condition,
         FzuCatLike: FzuCatLike,
-        FzuCatImg: FzuCatImg
+        FzuCatImg: FzuCatImg,
+        hasUserInfo: false
     }
 })

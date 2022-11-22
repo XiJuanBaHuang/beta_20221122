@@ -18,6 +18,10 @@ Page({
     },
 
     onLoad() {
+        let user = wx.getStorageSync('user')
+        this.setData({
+            userInfo: user
+        })
         let that = this;
         wx.cloud.database().collection('lcy-timeline')
             .orderBy('createTime', 'desc') //按发布视频排序
@@ -32,13 +36,15 @@ Page({
                     console.log("请求失败", res)
                 }
             })
+        
     },
 
-    jumpPage() {
-        wx.navigateTo({
-            url: '/pages/jie1/jie1',
+    onReady() {
+        this.setData({
+            hasUserInfo: app.globalData.hasUserInfo
         })
     },
+
     //获取用户信息
     getProfile() {
         // 不允许多次登录
@@ -54,9 +60,24 @@ Page({
                     userInfo: user,
                     hasUserInfo: true
                 })
+                app.globalData.hasUserInfo = true
             }
         })
     },
+
+    // 预览图片
+    previewImg: function (e) {
+        let imgData = e.currentTarget.dataset.img;
+        console.log("eeee", imgData[0])
+        console.log("图片s", imgData[1])
+        wx.previewImage({
+            //当前显示图片
+            current: imgData[0],
+            //所有图片
+            urls: imgData[1]
+        })
+    },
+
     //展开评论
     comment() {
 
@@ -64,5 +85,9 @@ Page({
     //点赞
     like() {
 
+    },
+
+    onReachBottom() {
+        
     },
 })
