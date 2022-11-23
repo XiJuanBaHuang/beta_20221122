@@ -1,0 +1,12 @@
+/* pages/search/search.wxss */
+
+page{
+    height: 100%;
+  }
+  
+.head-bg {
+    width: 750rpx;
+    height: 100%;
+    background-image: url('https://636c-cloud1-1g269x36167d2dc1-1315156639.tcb.qcloud.la/search-background.png?sign=27439ebb24c87286cfc6ae15fc31b9b4&t=1669174683');
+    background-size: 100% 100%;
+  }

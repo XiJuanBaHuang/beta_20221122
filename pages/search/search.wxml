@@ -1,0 +1,23 @@
+<!--pages/search/search.wxml-->
+<!-- <text>pages/search/search.wxml</text> -->
+
+
+<page-meta>
+    <navigation-bar title="搜索" background-color="#E6BD62" />
+    <view class="head-bg">
+
+        <van-search
+                value="{{ value }}"
+                placeholder="请输入猫猫id(0~14)"
+                use-action-slot
+                bind:change="onChange"
+                bind:search="onSearch"
+                shape="round" 
+                background="rgb(242, 221, 193)"
+        >
+        <view slot="action" bind:tap="onClick" data-catid="{{value}}">搜索</view>
+        </van-search>
+
+
+    </view>
+</page-meta>
