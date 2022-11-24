@@ -51,8 +51,8 @@
                     </block>
                 </view>
 
-                <image src="/images/comment.png" style="width: 62rpx; height: 52rpx; display: inline-block; box-sizing: border-box; position: relative; left: 70%; top: 35%"></image>
-                <image src="/images/love.png" style="width: 62rpx; height: 52rpx; display: inline-block; box-sizing: border-box; position: relative; left: 75%; top: 35%"></image>
+                <!-- <image src="/images/comment.png" style="width: 62rpx; height: 52rpx; display: inline-block; box-sizing: border-box; position: relative; left: 70%; top: 35%"></image> -->
+                <image src="/images/love.png" style="width: 62rpx; height: 52rpx; display: inline-block; box-sizing: border-box; position: relative; left: 85%; top: 35%"></image>
 
             </view>
         </scroll-view>

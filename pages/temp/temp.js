@@ -39,7 +39,7 @@ Page({
         
     },
 
-    onReady() {
+    onShow() {
         this.setData({
             hasUserInfo: app.globalData.hasUserInfo
         })

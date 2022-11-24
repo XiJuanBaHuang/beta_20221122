@@ -119,8 +119,12 @@ Page({
                         title: '发布成功',
                     })
                     console.log('发布成功', res)
-                    wx.navigateTo({
-                        url: '/pages/pengyouquan/pengyouquan',
+                    // wx.navigateTo({
+                    //     // url: '/pages/pengyouquan/pengyouquan',
+                    //     url: '/pages/temp/temp'
+                    // })
+                    wx.reLaunch({
+                        url: '/pages/temp/temp'
                     })
                 },
                 fail: err => {
